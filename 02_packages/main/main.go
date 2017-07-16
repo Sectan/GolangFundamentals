@@ -21,6 +21,14 @@ import (
 	"github.com/sectan/GolangFundamentals/02_packages/roma/testaccio"
 )
 
+// This table illustrates how CaputMundi is accessed in files that
+// import the package after the various types of import declaration.
+// Import declaration                                                       Local name of CaputMundi
+//
+// import   "github.com/sectan/GolangFundamentals/02_packages/roma"         roma.CaputMundi
+// import r "github.com/sectan/GolangFundamentals/02_packages/roma"         r.CaputMundi
+// import . "github.com/sectan/GolangFundamentals/02_packages/roma"         CaputMundi
+
 func main () {
 	fmt.Println(kriens.Gemeinde)
 	fmt.Println(roma.CaputMundi)
