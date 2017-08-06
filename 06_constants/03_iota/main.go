@@ -28,6 +28,19 @@ const (
 	TB = 1 << (iota * 10) // 1 << (4 * 10)
 )
 
+// Since iota can be part of an expression and expressions can be
+// implicitly repeated, it is easy to build intricate sets of values.
+// Within a parenthesized const declaration list the expression list may be omitted from any but the first declaration.
+// More information: https://golang.org/ref/spec#Constant_declarations
+type ByteSize float64
+const (
+	_           = iota // ignore first value by assigning to blank identifier
+	kb ByteSize = 1 << (10 * iota)
+	mb
+	gb
+	tb
+)
+
 func main() {
 	fmt.Println(a)
 	fmt.Println(b)
