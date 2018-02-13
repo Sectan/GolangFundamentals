@@ -4,6 +4,11 @@
 // More info: https://golang.org/ref/spec#Array_types
 // Copied some doc from: https://gobyexample.com/range
 
+// Arrays are useful when planning the detailed layout of memory 
+// and sometimes can help avoid allocation, but primarily they are a 
+// building block for slices, the subject of the next section.
+// More info: https://golang.org/doc/effective_go.html#arrays
+
 package main
 
 import "fmt"
