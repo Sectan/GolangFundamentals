@@ -1,5 +1,5 @@
-// An array is a numbered sequence of elements of a single type, 
-// called the element type. The number of elements is called 
+// An array is a numbered sequence of elements of a single type,
+// called the element type. The number of elements is called
 // the length and is never negative.
 // More info: https://golang.org/ref/spec#Array_types
 // Copied some doc from: https://gobyexample.com/range
@@ -19,11 +19,15 @@ func main() {
 
 	// range on arrays provides both the index and value for each entry.
 	// See Golang Spec: "For statements with range clause"
-	for i, v := range(oneD) {
+	for i, v := range oneD {
 		fmt.Printf("index: %v, value: %v\n", i, v)
 	}
 
 	// Even multi dimensional arrays are possible
 	var twoD [2][3]int
 	fmt.Println(twoD)
-	}
+
+	// The notation ... specifies an array length equal to the maximum element index plus one.
+	players := [...]string{"Totti", "de Rossi"} // The maximum element index in this example is 1
+	fmt.Println(len(players))                   // len = maximum element index + 1 = 1 + 1 = 2
+}
