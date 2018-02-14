@@ -16,7 +16,13 @@ func main() {
 	players = append(players, "Totti", "de Rossi", "Florenzi")
 	fmt.Println(len(players))
 	fmt.Println(cap(players))
-}
 
-https://tip.golang.org/doc/go1.2#three_index
-https://medium.com/golangspec/slice-expressions-in-go-963368c20765
+	var someSlice = []int{}
+	someSlice = new([100]int)[:50] // same as make([]int, 50, 100)
+	// new returns a pointer to an array
+	// Golang Spec states: If a is a pointer to an array, a[low : high] is shorthand for (*a)[low : high].
+
+	fmt.Println(someSlice)
+	fmt.Println(len(someSlice))
+	fmt.Println(cap(someSlice))
+}
