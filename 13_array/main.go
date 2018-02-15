@@ -4,9 +4,10 @@
 // More info: https://golang.org/ref/spec#Array_types
 // Copied some doc from: https://gobyexample.com/range
 
-// Arrays are useful when planning the detailed layout of memory 
-// and sometimes can help avoid allocation, but primarily they are a 
+// Arrays are useful when planning the detailed layout of memory
+// and sometimes can help avoid allocation, but primarily they are a
 // building block for slices, the subject of the next section.
+// An array's size is fixed; its length is part of its type ([4]int and [5]int are distinct, incompatible types).
 // More info: https://golang.org/doc/effective_go.html#arrays
 
 package main
@@ -35,4 +36,7 @@ func main() {
 	// The notation ... specifies an array length equal to the maximum element index plus one.
 	players := [...]string{"Totti", "de Rossi"} // The maximum element index in this example is 1
 	fmt.Println(len(players))                   // len = maximum element index + 1 = 1 + 1 = 2
+
+	// Arrays can be compared
+	fmt.Println(players == [...]string{"Totti", "de Rossi"})
 }
