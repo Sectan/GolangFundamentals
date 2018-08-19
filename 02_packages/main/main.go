@@ -10,26 +10,26 @@ import "fmt"
 // in which the package's source code resides.
 // Therefore every Go project should be created inside $GOPATH/src .
 // A common practice for package paths are:
-//  - github.com/username/projectname/packagename
+//  - gitlab.com/username/projectname/packagename
 //  - projectwebsite/packagename
-import "github.com/sectan/GolangFundamentals/02_packages/kriens"
+import "gitlab.com/sectan/GolangFundamentals/02_packages/kriens"
 
 // Example of the factored import statement.
 // It is good style to use the factored import statement.
 import (
-	"github.com/sectan/GolangFundamentals/02_packages/roma"
-	"github.com/sectan/GolangFundamentals/02_packages/roma/testaccio"
+	"gitlab.com/sectan/GolangFundamentals/02_packages/roma"
+	"gitlab.com/sectan/GolangFundamentals/02_packages/roma/testaccio"
 )
 
 // This table illustrates how CaputMundi is accessed in files that
 // import the package after the various types of import declaration.
 // Import declaration                                                       Local name of CaputMundi
 //
-// import   "github.com/sectan/GolangFundamentals/02_packages/roma"         roma.CaputMundi
-// import r "github.com/sectan/GolangFundamentals/02_packages/roma"         r.CaputMundi
-// import . "github.com/sectan/GolangFundamentals/02_packages/roma"         CaputMundi
+// import   "gitlab.com/sectan/GolangFundamentals/02_packages/roma"         roma.CaputMundi
+// import r "gitlab.com/sectan/GolangFundamentals/02_packages/roma"         r.CaputMundi
+// import . "gitlab.com/sectan/GolangFundamentals/02_packages/roma"         CaputMundi
 
-func main () {
+func main() {
 	fmt.Println(kriens.Gemeinde)
 	fmt.Println(roma.CaputMundi)
 	fmt.Println(testaccio.Rione20)
