@@ -29,6 +29,10 @@ import (
 // import r "gitlab.com/sectan/GolangFundamentals/02_packages/roma"         r.CaputMundi
 // import . "gitlab.com/sectan/GolangFundamentals/02_packages/roma"         CaputMundi
 
+// “when designing your package specific scope encapsulation, start by designing
+// a public API by defyining the minimum set of FUNCTIONS that shall be exposed to the outsite world.”
+//   — @EnchanterIO https://medium.com/gophersland/gopher-vs-object-oriented-golang-4fa62b88c701
+
 func main() {
 	fmt.Println(kriens.Gemeinde)
 	fmt.Println(roma.CaputMundi)
