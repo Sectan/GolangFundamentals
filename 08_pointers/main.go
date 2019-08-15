@@ -19,12 +19,14 @@ func main() {
 	a := 10
 	fmt.Println("Content of a:", a)
 	fmt.Println("Address of a:", &a)
-	var b = &a // b is of type *int (address operator always returns type *T), b references a (referencing)
-	fmt.Println("b:", b)  // Prints the address of a
+	var b = &a             // b is of type *int (address operator always returns type *T), b references a (referencing)
+	fmt.Println("b:", b)   // Prints the address of a
 	fmt.Println("*b:", *b) // Prints the content of a (dereferencing)
 
-
-	fmt.Println(b)
+	// Assigning a value to a dereferenced pointer changes the value at the referenced address. (https://gobyexample.com/pointers)
+	*b = 20
+	fmt.Println("Content of a:", a)
+	fmt.Println("*b:", *b)
 
 	x := 5
 	zeroWithPointer(&x)
