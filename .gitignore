@@ -3,3 +3,4 @@
 *.exe
 debug
 .vscode
+*.o
